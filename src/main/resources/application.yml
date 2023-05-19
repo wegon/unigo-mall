@@ -1,0 +1,9 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: "unigo"
+    password: "123456"
+    url: jdbc:mysql://159.75.121.137:3306/unigo-mall?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimeZone=Asia/Shanghai
