@@ -1,12 +1,9 @@
 package com.unigo.mall.model;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.unigo.mall.model.base.BaseModel;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 @TableName("product")

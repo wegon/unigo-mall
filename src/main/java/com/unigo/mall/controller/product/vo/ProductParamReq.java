@@ -6,4 +6,5 @@ import lombok.Data;
 @Data
 public class ProductParamReq extends PageSortParam {
     private String productName;
+    private String categoryId;
 }
