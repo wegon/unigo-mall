@@ -4,12 +4,10 @@ import com.unigo.mall.common.ApiResult;
 import com.unigo.mall.controller.category.vo.req.CategoryAddParamVo;
 import com.unigo.mall.controller.category.vo.req.CategoryParamVo;
 import com.unigo.mall.controller.category.vo.req.CategoryUpdateParamVo;
+import com.unigo.mall.controller.common.vo.IdParamVo;
 import com.unigo.mall.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CategoryController {
@@ -29,5 +27,10 @@ public class CategoryController {
     @PostMapping("category/update")
     public ApiResult update(@RequestBody CategoryUpdateParamVo categoryUpdateParamVo) {
         return ApiResult.ok(categoryService.update(categoryUpdateParamVo));
+    }
+
+    @PostMapping("category/delete")
+    public ApiResult delete(@RequestBody IdParamVo idParamVo) {
+        return ApiResult.ok(categoryService.removeById(idParamVo.getId()));
     }
 }
